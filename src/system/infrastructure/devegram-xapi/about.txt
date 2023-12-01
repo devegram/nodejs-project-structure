@@ -1,0 +1,12 @@
+Purpose of this technology is to give a clean API to trigger desired logic / software / code
+that is organized in the following structure [namespace -> module -> action].
+
+This API provides different actions for each server verb type e.g.
+createPOST, createGET,createDELETE, createPUT etc...
+
+This API provides a permission system for each module and action.
+
+
+
+
+

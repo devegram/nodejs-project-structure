@@ -1,0 +1,1 @@
+import("#root/src/system/boot/index.js");
