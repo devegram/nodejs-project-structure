@@ -13,7 +13,7 @@ export default class {
     }
 
     async _applyRepositoryTask (taskToApply) {
-		return await this.repository._applyTask(taskToApply, this.request, this.routeParams);
+		return await this.repository._applyTask(taskToApply, this.request, this.response, this.routeParams);
 	}
 
 	async _applyOwnTask (taskToApply) {

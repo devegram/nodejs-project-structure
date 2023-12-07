@@ -8,8 +8,8 @@ export default class {
         //this.mdo = controller.mdo
     }
 
-    async _applyTask (taskToApply, request, routeParams)
+    async _applyTask (taskToApply, request, response, routeParams)
     {
-        return await this[taskToApply](request, ...routeParams);
+        return await this[taskToApply](request, response, ...routeParams);
     }
 }

@@ -6,7 +6,7 @@ export default class extends _sys.class.moduleApi.repository {
     }
 
     //http://localhost:4000/xapi/example/test/hello
-    helloGET() {
-        return "Hello from Example/Test module is successful"
+    helloGET(req, res) {
+        _sys.util.webResponse.success(res, "Hello World!")
     }
 }

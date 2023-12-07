@@ -33,12 +33,12 @@ export default class {
 
         try {
             const routeParams = any.split('/'); //if (routeParams.length) routeParams.shift();
-            const apiController = (await import('#root/src/business/modules/example/test/logic/controller.js')).default
+            const apiController = (await import('#root/src/business/modules/'+namespace+'/'+module+'/logic/controller.js')).default
             const taskToApply = method + request.method
 
             let apiResponse = await (new apiController(request, response, taskToApply, routeParams, webUser, this.mdo))._applyTask(taskToApply);
-            if (typeof apiResponse == 'object') return response.status(200).send(apiResponse)
-            return response.status(200).send(apiResponse + "")
+            /*if (typeof apiResponse == 'object') return response.status(200).send(apiResponse)
+            return response.status(200).send(apiResponse + "")*/
             //if ($this->log) ArcLogger::arcLog($request, apiResponse, $requestTime, time());
         } catch (exceptionVar) {
             console.log('xapi-console-error', exceptionVar, '\n')
