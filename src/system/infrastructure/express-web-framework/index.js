@@ -1,9 +1,7 @@
 import express from "express";
-import responseClass from "./response/index.js"
 import EventEmitter from "events";
 import bodyParser from "body-parser"
 import devegramXapi from './../devegram-xapi/router.js'
-export const response = new responseClass()
 
 export const app = express();
 app.use(express.json());
@@ -23,12 +21,11 @@ export const startWebServer = (port = 4000) => {
     EventEmitter.setMaxListeners(600);
     process.setMaxListeners(600)
     const appListener = app.listen(port, () => {
-        console.log(`Server Running....`, "❤️", "port", appListener.address().port)
+        console.log(`Server Running....`, " ❤️ ", "port", appListener.address().port)
     });
 }
 
 export default {
     app,
-    response,
     startWebServer
 }

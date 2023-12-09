@@ -16,7 +16,10 @@
   "description": "open-source repository that offers a meticulously structured and highly adaptable project layout blueprint suitable for various types of Node.js applications. Whether you're embarking on the development of a web application, API, or any Node.js project, this template provides a robust groundwork to jumpstart your development journey.",
   "license": "ISC",
   "imports": {
-    "#root/*.js": "./*.js"
+    "#root/*.js": "./*.js",
+    "#infra/*.js": "./src/system/infrastructure/*.js",
+    "#class/*.js": "./src/system/classes/*.js",
+    "#modules/*.js": "./src/business/modules/*.js"
   },
   "engines": {
     "node": "*"
@@ -28,7 +31,8 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
-    "mysql2": "^3.6.5"
+    "mysql2": "^3.6.5",
+    "pg": "^8.11.3"
   },
   "scripts": {
     "dev": "nodemon index.js --inspect",
